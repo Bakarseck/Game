@@ -1,0 +1,3 @@
+hello : Formule de salutation
+book : Un ensemble de pages reliées contenant des informations, des histoires ou des images
+apple : Un fruit rond et comestible, généralement de couleur rouge, vert ou jaune
