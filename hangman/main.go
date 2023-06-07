@@ -30,8 +30,7 @@ func main() {
 	definition := temp[1]
 
 	compteur := 0
-
-	fmt.Println("Welcome in our game of Hangman")
+	clearConsole("Welcome in our game of Hangman")
 
 	fmt.Println(strings.Repeat("_ ", n))
 	fmt.Println(definition)
@@ -61,6 +60,7 @@ func main() {
 					fmt.Printf("\nCongratulations, you are finded the right answer in %v tries\n", compteur+1)
 					break
 				}
+				clearConsole(definition)
 				PrintWord(word, finded)
 			} else {
 				clearConsole(definition)

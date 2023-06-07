@@ -1,0 +1,63 @@
+:root {
+    --text-color: rgb(67, 63, 63);
+    --second-text-color: rgb(255, 142, 3);
+}
+h1 {
+    text-align: center;
+    color: var(--text-color);
+    margin: 50px;
+}
+body {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: bisque;
+    text-decoration: none;
+}
+
+a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+.container form {
+    height: 100vh;
+    margin: 10%;
+    display: flex;
+    flex-direction: column;
+}
+
+input, button {
+    text-align: center;
+    color: var(--text-color);
+    padding : 10px;
+    font-size: 20px;
+    outline: none;
+    margin: 20px auto;
+    width: 45%;
+    height: 30px;
+    border-radius: 20px;
+}
+
+button{
+    outline: none;
+    position: relative;
+    height: 50px;
+    font-size: 25px;
+    transition: 1s;
+}
+
+button:hover {
+    background-color: bisque;
+}
+
+input::placeholder {
+    color: var(--text-color);
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+@media (max-width: 1000px) {
+    input {
+        width: 80%;
+        transition: 1s;
+    }
+}
