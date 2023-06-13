@@ -21,7 +21,7 @@ func main() {
 
 	_word := allWords[index]
 
-	temp := strings.Split(_word, " : ")
+	temp := strings.Split(_word, ": ")
 
 	word := temp[0]
 
@@ -32,8 +32,8 @@ func main() {
 	compteur := 0
 	clearConsole("Welcome in our game of Hangman")
 
-	fmt.Println(strings.Repeat("_ ", n))
 	fmt.Println(definition)
+	fmt.Println(strings.Repeat("_ ", n))
 
 	letter := ""
 	finded := ""

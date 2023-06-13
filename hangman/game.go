@@ -6,11 +6,11 @@ import (
 	"os/exec"
 )
 
-func clearConsole(definition string) {
+func clearConsole(message string) {
 	clearCmd := exec.Command("clear")
 	clearCmd.Stdout = os.Stdout
 	clearCmd.Run()
-	fmt.Println(definition)
+	fmt.Println(message)
 }
 
 func checkError(e error) {
