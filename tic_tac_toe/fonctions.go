@@ -22,6 +22,7 @@ func win(joueur Joueur) {
 
 	for i, v := range board {
 		if v == joueur.symbol {
+			
 			// In same line
 			if i%3==0  {
 				if board[i+1] == joueur.symbol && board[i+2] == joueur.symbol {

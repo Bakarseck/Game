@@ -11,6 +11,7 @@ body {
     font-family: 'Courier New', Courier, monospace;
     background-color: bisque;
     text-decoration: none;
+    height: 100vh;
 }
 
 a {
@@ -53,6 +54,32 @@ input::placeholder {
     color: var(--text-color);
     text-align: center;
     font-family: 'Courier New', Courier, monospace;
+}
+
+.container-player {
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10%;
+    width: 60%;
+    background: red;
+}
+
+.player1, .player2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    height: 60%;
+    background: yellow;
+}
+
+.player1 {
+    margin-left: 20px;
+}
+.player2 {
+    margin-right: 20px;
 }
 
 @media (max-width: 1000px) {
