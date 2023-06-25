@@ -1,0 +1,184 @@
+* {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+body {
+    height: 100vh;
+    color: white;
+}
+
+.container {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 30% 40% 30%;
+}
+
+.header {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    background: green;
+}
+
+.nom-1 {
+    display: grid;
+    grid-template-rows: 20% 80%;
+    background: red;
+}
+
+.nom-equipe {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: green;
+}
+
+.members {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    justify-content: center;
+    background: red;
+}
+
+.members {
+    font-size: 3vw;
+}
+
+.members ul li {
+    padding: 5px 30px;
+}
+
+.nom-2 {
+    display: grid;
+    grid-template-rows: 20% 80%;
+    background: yellow;
+}
+
+.score {
+    display: grid;
+    grid-template-columns: 20% 60% 20%;
+    font-size: 100px;
+    background: yellow;
+}
+
+.score-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: red;
+    grid-column: 2/3;
+}
+
+.buttons-score {
+    display: grid;
+    grid-template-columns: 25% 50% 25%;
+    background: red;
+}
+
+.buttons-equipe-A{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background: green ;
+    padding-top: 30px;
+}
+
+.time {
+    display: grid;
+    background: yellow;
+}
+
+.buttons-equipe-B {
+    display: grid;
+    grid-template-rows: 50% 50%;
+    background: green ;
+    padding-top: 30px;
+}
+
+.plus, .malus {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.time-display {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    background: green;
+}
+
+.points {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 8vw;
+    height: 6vh;
+    margin-right: 10px;
+    border-radius: 20px;
+    background: red;
+    padding: 10px;
+}
+
+.time-buttons {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.reset-A, .reset-B {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button {
+    background: red;
+    color: white;
+    font-size: 20px;
+    text-transform: capitalize;
+    border-radius: 30px;
+    width: 12vw;
+    height: 6vh;
+    transition: transform 0.2s;
+}
+
+.buttons-equipe-A button, .buttons-equipe-B button {
+    font-size: 15px;
+    width: 10vw;
+}
+
+.time-buttons button {
+    background-color: red;
+    border: none;
+    font-size: 10px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:active {
+    transform: scale(1.1);
+}
+
+/* Desktop */
+@media screen and (min-width: 1024px) {
+
+}
+
+/* Tablet */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    
+}
+
+/* Phone */
+@media screen and (max-width: 767px) {
+
+}

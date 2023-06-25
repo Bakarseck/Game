@@ -4,7 +4,6 @@ import (
 	"fmt"
 	"os"
 	"os/exec"
-	"strings"
 )
 
 /*
@@ -14,17 +13,17 @@ import (
 
 type Joueur struct {
 	position int
-	name string
-	symbol byte
+	name     string
+	symbol   byte
 }
 
 func win(joueur Joueur) {
 
 	for i, v := range board {
 		if v == joueur.symbol {
-			
+
 			// In same line
-			if i%3==0  {
+			if i%3 == 0 {
 				if board[i+1] == joueur.symbol && board[i+2] == joueur.symbol {
 					clearConsole("")
 					PrintBoard()
@@ -79,7 +78,7 @@ func play(message1, message2, message string, joueur1, joueur2 Joueur) {
 	for size() != 9 {
 		Saisie(&joueur1.position, message1)
 		remaining := getPosition()
-		if remaining[joueur1.position - 1] == 1 {
+		if remaining[joueur1.position-1] == 1 {
 			message := "Position déjà occupé\n"
 			play(message1, message2, message, joueur1, joueur2)
 			message = ""
@@ -91,7 +90,7 @@ func play(message1, message2, message string, joueur1, joueur2 Joueur) {
 		PrintBoard()
 		Saisie(&joueur2.position, message2)
 		remaining = getPosition()
-		if remaining[joueur2.position - 1] == 1 {
+		if remaining[joueur2.position-1] == 1 {
 			message := "Position déjà occupé\n"
 			play(message1, message2, message, joueur1, joueur2)
 			message = ""
@@ -120,7 +119,7 @@ func Saisie(position *int, message string) {
 	for *position > 9 || *position < 1 {
 		if c == 0 {
 			message = "Mauvaise saisie\n" + message
-		} 
+		}
 		c++
 		clearConsole(message)
 		PrintBoard()
@@ -130,13 +129,13 @@ func Saisie(position *int, message string) {
 
 func PrintBoard() {
 	for i, val := range board {
-		if i % 3 == 0{
+		if i%3 == 0 {
 			fmt.Println()
-			fmt.Print(strings.Repeat(" ", 21))
-			fmt.Println(strings.Repeat("_", 11))
-			fmt.Println()
-			fmt.Print(strings.Repeat(" ", 20))
-			fmt.Print("|")
+			// fmt.Print(strings.Repeat(" ", 21))
+			// fmt.Println(strings.Repeat("_", 11))
+			// fmt.Println()
+			// fmt.Print(strings.Repeat(" ", 20))
+			// fmt.Print("|")
 		}
 		if val == 'X' || val == 'O' {
 			if val == 'X' {
@@ -144,13 +143,13 @@ func PrintBoard() {
 			} else if val == 'O' {
 				fmt.Print("\033[38;2;0;255;0m ", string(val), "\033[0m", " |")
 			}
-		} else  {
+		} else {
 			fmt.Print("   |")
 		}
 	}
 	fmt.Println()
-	fmt.Print(strings.Repeat(" ", 21))
-	fmt.Println(strings.Repeat("_", 11))
+	// fmt.Print(strings.Repeat(" ", 21))
+	// fmt.Println(strings.Repeat("_", 11))
 }
 
 func clearConsole(message string) {

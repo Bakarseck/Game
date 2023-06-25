@@ -15,10 +15,10 @@ func main() {
 	joueur1.symbol = 'X'
 	joueur2.symbol = 'O'
 
-	fmt.Println("Veuillez entrez le nom du Joueur 1: \n")
+	fmt.Println("Veuillez entrez le nom du Joueur 1:")
 	fmt.Scan(&joueur1.name)
 
-	fmt.Println("Veuillez entrez le nom du Joueur 2: \n")
+	fmt.Println("Veuillez entrez le nom du Joueur 2:")
 	fmt.Scan(&joueur2.name)
 
 	message1 := fmt.Sprintf("%v : Veuillez entrez un nombre compris entre 1 et 9 pour votre position", joueur1.name)
